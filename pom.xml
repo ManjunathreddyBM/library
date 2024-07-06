@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.3.0</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.manju</groupId>
+	<artifactId>library</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>library</name>
+	<description>Demo project to create own library</description>
+
+	<url>https://github.com/ManjunathreddyBM/library</url>
+	<licenses>
+		<license>
+			<name>Apache License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0</url>
+		</license>
+	</licenses>
+
+	<!--Developer Information-->
+	<developers>
+		<developer>
+			<id>Manju</id>
+			<name>Manjunathreddy</name>
+			<email>manjunathreddycs@gmail.com</email>
+		</developer>
+	</developers>
+
+	<!--This configuration indicates that the source code is managed with Git and
+	hosted on GitHub, providing both read-only and developer (authenticated) access URL-->
+	<scm>
+		<connection>scm:git:git://github.com/ManjunathreddyBM/library.git</connection>
+		<developerConnection>scm:git:ssh://github.com/ManjunathreddyBM/library.git</developerConnection>
+		<tag>HEAD</tag>
+		<url>https://github.com/ManjunathreddyBM/library</url>
+	</scm>
+
+	<properties>
+		<java.version>17</java.version>
+	</properties>
+
+	<distributionManagement>
+		<repository>
+			<id>github</id>
+			<name>GitHub Packages</name>
+			<url>https://maven.pkg.github.com/ManjunathreddyBM/library</url>
+		</repository>
+	</distributionManagement>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
